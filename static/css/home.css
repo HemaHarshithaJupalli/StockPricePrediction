@@ -1,0 +1,398 @@
+.gradient-container {
+  background-color:  #4e4d4d;
+  position: fixed;
+  width: 100%;
+  /* Set the background color */
+}
+.header {
+  display: flex;
+  font-size: 20px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  padding-bottom: 10px;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+
+.Stokify {
+  font-size: 35px;
+  color: rgb(255, 255, 255);
+  padding-left: 20px;
+  /* Change the font size to your desired value */
+}
+
+.navigation-links {
+  display: flex;
+  size: 100px;
+  /* padding-bottom: 5px; */
+}
+
+.navigation-links a {
+  margin-right: 40px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.navigation-links a:hover {
+  text-decoration: underline;
+}
+.login-section {
+  display: flex;
+  font-size: 80px;
+  align-items: center;
+}
+
+/* Style for the login button */
+.login-button {
+  /* background-color: rgb(249, 66, 66); */
+  font-size: 17px;
+  border: 1px solid black;
+  color: #fcfbfb;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border-color: #f8f8f8;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  color: rgb(255, 255, 255);
+  /* Change to your desired text color */
+}
+
+.line {
+  height: 2px;
+  /* Adjust the height of the line */
+  background-color: black;
+  /* Set the color of the line */
+  width: 100%;
+  /* Set the width of the line to span the entire page */
+  margin-top: -10px;
+}
+
+/* context */
+.context {
+  padding-top: 50px;
+}
+
+.quote {
+  color: rgb(16, 16, 16);
+  padding-top: 100px;
+  text-align: center
+}
+
+.quote {
+  white-space: pre-line;
+  font-size: 35px;
+}
+
+/* search-bar..................... */
+.search {
+  box-sizing: border-box;
+  height: 15vh; /* Adjust the height as needed */
+  /* background: rgba(40, 60, 117); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 50px; /* Adjust the padding for top/bottom and right side */
+  padding-left: 100px; /* Adjust the padding for the left side */
+}
+
+.search-bar {
+  width: 100%;
+  min-width:500px;
+  max-width: 50px;
+  height: 10px; /* Adjust the height as needed */
+  min-height: 20px;
+  max-height: 50px;
+  text-align: center;
+  align-items: center;
+  /* padding-left: 180px;
+  padding-right: 220px; */
+}
+
+
+input {
+  width: 100%;
+  height: 40px;
+  display: block;
+  border-radius: 25px;
+  font-size: 25px;
+  padding: 8px 5px 8px 20px;
+  border: none;
+  box-shadow: 0 5px 8px 3px black
+}
+
+input:focus {
+  outline: none;
+}
+
+/* .search-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 50px;
+  width: 50px; /* Adjust as needed */
+  /* border: none;
+  background: transparent;
+  cursor: pointer;
+} */
+
+/* .search-icon{
+  padding-top: 30px;
+  padding-left: 10px;
+}
+button{
+  background: none;
+  border-radius: 50%;
+  border: none;
+} */ 
+.search-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.forms {
+  height: 50px;
+  padding-right: 40px; /* Adjust this value to give space for the icon */
+}
+
+.search-icon {
+  position: absolute;
+  top: 0;
+  margin-right: 10px;
+  right: 0;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.search-icon button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0 10px;
+} 
+
+/* logos...................................... */
+.icons {
+  display: flex;
+  align-items: center;
+  padding-top: 50px;
+  padding-left: 490px;
+  gap: 30px;
+
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
+  padding-left: 555px;
+  gap: 30px;
+  padding-bottom: 50px;
+
+}
+
+img {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+.faq {
+  /* background-color: aqua; */
+  font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+  justify-items: center;
+  font-size: 10px;
+}
+
+.faq h3 {
+  font-size: 10px;
+  padding-top: 15px;
+  padding-bottom: 40px;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  flex-basis: 40%;
+  align-items: center;
+  justify-items: center;
+}
+
+.list li {
+  font-size: 15px;
+  list-style: none;
+  align-items: center;
+  width: 75%;
+  padding: 2px 5px;
+}
+
+.list li label {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  padding: 25px;
+  font-size: 15px;
+  font-weight: 15px;
+  /* background: #303030; */
+  margin-bottom: 2px;
+  cursor: pointer;
+  position: relative;
+}
+
+label::after {
+  content: '+';
+  font-size: 30px;
+  position: absolute;
+  right: 20px;
+  transition: tranform 0.5s;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+.list .con {
+  /* background: #303030; */
+  text-align: left;
+  padding: 0 20px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1ms, padding 0.5s;
+}
+
+.list input[type="radio"]:checked+label+.con {
+  max-height: 600px;
+  padding: 30px 20px;
+}
+
+.list input[type="radio"]:checked+label::after {
+  transform: rotate(135deg);
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#faqs {
+  font-family: "Quicksand", sans-serif;
+  /* padding-bottom: 5px;    */
+  /* background-color: #000; */
+  color: #000;
+}
+
+section {
+  min-height: 100vh;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  padding-top: 60px;
+  font-size: 26px;
+  margin: 2rem 0rem;
+}
+
+.faq {
+  max-width: 800px;
+
+  margin-top: 0.5px;
+  padding-bottom: 4px;
+  border-bottom: 2px solid #fff;
+  cursor: pointer;
+}
+
+.question {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.question h3 {
+  font-size: 20px;
+}
+
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1.0s ease;
+}
+
+.answer p {
+  padding-top: 10px;
+  line-height: 1.6;
+  font-size: 20px;
+}
+
+.faq.active .answer {
+  max-height: 300px;
+  animation: fade 1s ease-in-out;
+}
+
+.faq.active svg {
+  transform: rotate(180deg);
+}
+
+svg {
+  transition: transform 0.5s ease-in;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+.contact {
+  position: relative;
+  min-height: 0px;
+  padding: 0px 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* background: #222; */
+}
+
+.contact .context2 {
+  color: #000;
+  font-size: 1.1em;
+  font-weight: 300;
+}
+
+.contactcontainer {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 50px;
+  margin-top: 30px;
+  color: #000;
+}
+.contactForm{
+  text-align: left;
+  padding-top: 10px;
+  padding-bottom: 40px;
+  padding-left: 334px;
+}

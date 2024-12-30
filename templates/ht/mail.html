@@ -1,0 +1,112 @@
+{% extends 'ht/base.html' %}
+ {% block title %}Mail Sending{% endblock %} 
+{% block content %}
+<style>
+    .container {
+        padding-top: 100px; /* Adjust the value as needed */
+    }
+    .card-md-5 {
+        border-radius: 15px;
+        overflow: hidden;
+    }
+
+    .card-body {
+        padding: 20px;
+    }
+
+    .form-control {
+        border: 1px solid #ced4da;
+        border-radius: 5px;
+        padding: 10px;
+        width: 100%;
+        margin-bottom: 15px;
+        box-sizing: border-box;
+    }
+
+    .btn-submit {
+        background-color: #28a745;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+    }
+
+    .btn-submit:hover {
+        background-color: #218838;
+    }
+
+    .alert {
+        border-radius: 5px;
+        margin-bottom: 15px;
+        padding: 10px;
+    }
+
+    .alert-danger {
+        background-color: #f8d7da;
+        border: 1px solid #f5c6cb;
+        color: #721c24;
+    }
+
+    .alert-success {
+        background-color: #d4edda;
+        border: 1px solid #c3e6cb;
+        color: #155724;
+    }
+
+    /* .close { 
+        float: right;
+        font-size: 10px;
+        font-weight: bold;
+        color: #000;
+        text-decoration: none;
+    }
+
+    .close:hover {
+        color: #555;
+     }*/
+</style>
+<div class="container mt-4">
+    <div class="card-md-5 mx-auto shadow-lg">
+        {% if messages %}
+        {% for i in messages %}
+        {% if i.tags == "error" %}
+        <div class="alert alert-danger alert-dismissable my-2">
+            <!-- <a href="#" class="close" data-dismiss="alert" aria-label="close"> -->
+                <!-- &times; -->
+            <!-- </a> -->
+            {{i}}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% else %}
+        <div class="alert alert-{{i.tags}} alert-dismissable my-2">
+            <!-- <a href="#" class="close" data-dismiss="alert" aria-label="close"> -->
+                <!-- <span aria-hidden="true">&times;</span> -->
+            <!-- </a> -->
+            {{i}}
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+        </div>
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+        <div class="card-body">
+            <h4>Feedback Us!</h4>
+            <form method="post">
+                {% csrf_token %}
+                <input type="email" name="sn" placeholder="Enter mail id"
+                class="form-control my-2">
+                <input type="text" name="sub" placeholder="Enter Subject"
+                class="form-control my-2">
+                <textarea rows="3" name="msg" placeholder="Enter Message"
+                class="form-control my-2"></textarea>
+                <input type="submit" value="Submit"
+                class="form-control my-2 btn btn-outline-success">
+            </form>
+        </div>
+    </div>
+</div>
+<!-- {% endblock %} -->
